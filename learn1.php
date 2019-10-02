@@ -44,5 +44,30 @@ echo "Hello word!";
  	echo myFunction2(6, 7);
  		echo "<br>";
  	echo myFunction2();
- 	
+ 	?>
+
+ <?php
+ 	// Cau dieu kien 
+ 	//  1
+ 	// if ( điều kiện){
+	// Khối các câu lệnh được thực thi nếu điều kiện là đúng.
+	//}
+ 	//  2	
+ 	// if ( điều kiện){
+	// Khối các câu lệnh được thực thi nếu điều kiện là đúng.
+	//} else {
+	// Khối các câu lệnh được thực thi nếu điều kiện là sai.
+	//}
+	// 3
+	// if ( điều kiện){
+	// Khối các câu lệnh được thực thi nếu điều kiện là đúng.
+	//} elseif {
+	// Khối các câu lệnh được thực thi nếu điều kiện là sai.
+	//}
+	//else {
+	// Khối các câu lệnh được thực thi nếu điều kiện là sai.
+	//}
+ 
  ?>
+
+ 

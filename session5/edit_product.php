@@ -38,22 +38,16 @@
     $oldDescription = $row['description'];
     $oldPrice = $row['price'];
     $oldStatus = $row['status'];
-    $oldCreated = $row['created'];
+    $oldImage = $row['image'];
     if(isset($_POST['edit_product'])) {
       $product_category_id = $_POST['product_category_id'];
       $name = $_POST['name'];
       $description = $_POST['description'];
       $price = $_POST['price'];
       $status = $_POST['status'];
-      $image = 'product_image_default.png';
-      $image_file = $_FILES['image'];
-      if ($image_file['error'] == 0) {
-        $image = $image_file['name'];
-        move_uploaded_file($image_file['tmp_name'], 'upload/'.$image);
-      }
-      
-      $sql = "UPDATE products SET name = '$name', description = '$description',
-      price = '$price', created = '$created', status = '$status', product_category_id = '$product_category_id' WHERE id =$id";
+      $image = $_POST['image'];
+      $sql = "UPDATE products SET name = '$name', description = '$description', image = '$image',
+      price = '$price', status = '$status', product_category_id = '$product_category_id' WHERE id =$id";
       if (mysqli_query($connect, $sql) === TRUE) {
         header("Location: list_product.php");
       }
@@ -145,13 +139,10 @@
                           <input type="text" class="form-control form-control-user" name="description" placeholder="Description" value="<?php echo $oldDescription;?>">
                         </div>
                         <div class="form-group">
-                          <input type="file" name="image" >
+                          <input type="file" name="image" value="<?php echo $oldImage?>">
                         </div>
                         <div class="form-group">
                           <input type="text" class="form-control form-control-user" name="price" placeholder="Price" value="<?php echo $oldPrice;?>">
-                        </div>
-                        <div class="form-group">
-                          <input type="date" name="created" value="<?php echo $oldCreated;?>">
                         </div>
                         <div class="form-group">
                           <input type="text" class="form-control form-control-user" name="status" placeholder="Status" value="<?php echo $oldStatus;?>">

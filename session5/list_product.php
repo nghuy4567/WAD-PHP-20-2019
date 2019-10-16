@@ -151,7 +151,7 @@
                     <?php }?>
                    <?php } else {?>
                    	<tr>
-                   		<td colspan="7"> No product</td>
+                   		<td colspan="6"> No product</td>
                    	</tr>
                    <?php }?>
                   </tbody>

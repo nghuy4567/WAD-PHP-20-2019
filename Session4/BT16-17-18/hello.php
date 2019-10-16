@@ -10,7 +10,9 @@ if(mysqli_num_rows($result) > 0)
 	{
 		$username = $row["username"];
 		$password = $row["[password]"];
-		$gender = $row["Gender"];
+		$email = $row["email"];
+
+
 	}
 }
 ?>

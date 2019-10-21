@@ -30,7 +30,7 @@
   <?php include 'connect.php';?>
   <?php 
 
-      $sql = "SELECT * FROM products";
+      $sql = "SELECT * FROM products WHERE `product_category_id` = 0";
       $result = mysqli_query($connect, $sql);
 
   ?>
@@ -130,15 +130,10 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-         <div class="">
-          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            List Product
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="phone.php">Phone List</a>
-            <a class="dropdown-item" href="laptop.php">Laptop List</a>
-          </div>
-        </div>
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Laptop List</h6>
+            </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -198,7 +193,13 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2019</span>
+          </div>
+        </div>
+      </footer>
       <!-- End of Footer -->
 
     </div>
